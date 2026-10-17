@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poprawki strony: przed i po — piekarnia, projekt demonstracyjny</title>
+<meta name="description" content="Zepsuta strona małej firmy i ta sama po poprawkach: wyniki Lighthouse, rozmiar strony, lista napraw. Projekt demonstracyjny, firma fikcyjna.">
+<meta property="og:title" content="Poprawki strony: przed i po">
+<meta property="og:description" content="Wydajność 75 → 99, dostępność 45 → 100, strona z 4,9 MB do 303 KB.">
+<meta property="og:image" content="https://marven151.github.io/site-fix-demo/img/telefon-after.jpg">
+<meta name="theme-color" content="#351a2b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23351a2b'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%23edccbe' stroke-width='3'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edccbe;--tone:#e3b9a8;--ink:#351a2b;--ink2:#4a2a3e;--muted:#56303f;--m:clamp(20px,6vw,96px);--display:'Bodoni Moda',Georgia,serif;--text:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--bg);font:400 clamp(1.0625rem,1rem + .25vw,1.1875rem)/1.6 var(--text);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+::selection{background:var(--bg);color:var(--ink)}
+.display{font-family:var(--display);font-weight:500;letter-spacing:-.02em;line-height:.95}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 28px;background:var(--bg);color:var(--ink);font-weight:500;text-decoration:none;transition:background .2s,color .2s}
+.btn:hover{background:#fff}
+.btn.o{background:var(--ink2);color:var(--bg)}
+.btn.o:hover{background:var(--bg);color:var(--ink)}
+header{padding:clamp(56px,9vw,140px) var(--m) clamp(48px,6vw,96px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--m);align-items:end}
+.ph{position:relative;aspect-ratio:1/1.05}
+.ph img{position:absolute;object-fit:cover}
+.ph .a{left:0;top:0;width:78%;height:64%}
+.ph .b{right:0;bottom:0;width:62%;height:50%}
+header h1{font-size:clamp(2.5rem,6.4vw,6rem);max-width:14ch}
+header p{margin-top:24px;max-width:46ch;color:var(--bg)}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.nums{background:var(--bg);color:var(--ink);padding:clamp(64px,8vw,128px) var(--m)}
+.nums h2{font-size:clamp(2rem,3.4vw,3rem);margin-bottom:48px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px var(--m)}
+.m .l{font-weight:500;margin-top:10px}
+.m .v{font-family:var(--display);font-weight:500;font-size:clamp(2.25rem,4.6vw,4.25rem);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.m .v span{display:inline-block;color:var(--muted);font-size:.62em;margin-right:.2em}
+.m .a{display:block;margin-bottom:6px}
+.m small{display:block;margin-top:8px;font-family:var(--text);font-size:.9375rem;letter-spacing:0;color:var(--muted)}
+.note{margin-top:48px;max-width:60ch;font-size:.9375rem;color:var(--muted)}
+.shots{padding:clamp(64px,8vw,128px) var(--m);display:grid;grid-template-columns:1fr 1fr;gap:var(--m);max-width:1100px}
+.shots figure img{width:100%;background:var(--ink2)}
+.shots figcaption{padding-top:14px;font-weight:500}
+.list{background:var(--bg);color:var(--ink);padding:clamp(64px,8vw,128px) var(--m)}
+.list h2{font-size:clamp(2rem,3.4vw,3rem);margin-bottom:48px}
+.fix{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:8px var(--m);max-width:1100px;margin-bottom:40px}
+.fix h3{font-weight:500;font-size:1.25rem}
+.fix p{color:var(--ink)}
+.fix p b{font-weight:500}
+footer{padding:48px var(--m);font-size:.9375rem;max-width:90ch}
+footer p+p{margin-top:8px}
+@media (prefers-reduced-motion:no-preference){
+  .js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+  .js [data-reveal].is-in{opacity:1;transform:none}
+}
+@media (max-width:900px){header{display:block}.ph{margin-top:40px;max-width:480px}}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.shots{grid-template-columns:1fr}.fix{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="txt">
+  <h1 class="display">Ta sama strona, po poprawkach</h1>
+  <p>Zepsuta strona typowej małej firmy i to, co z niej zrobiłem bez zmiany treści. Firma jest fikcyjna, błędy są prawdziwe i spotykane na co dzień.</p>
+  <div class="acts"><a class="btn" href="after/">Zobacz po</a><a class="btn o" href="before/">Zobacz przed</a><a class="btn o" href="https://github.com/Marven151/site-fix-demo">Kod</a></div>
+  </div>
+  <div class="ph" aria-hidden="true"><img class="a" src="after/img/chleb-960.webp" alt="" width="960" height="640"><img class="b" src="after/img/witryna-960.webp" alt="" width="960" height="650"></div>
+</header>
+
+<section class="nums" aria-labelledby="h-nums">
+  <h2 class="display" id="h-nums" data-reveal>Wyniki</h2>
+  <div class="grid">
+    <div class="m" data-reveal><p class="v"><span>75</span>99</p><p class="l">Wydajność</p></div>
+    <div class="m" data-reveal style="--d:1"><p class="v"><span>45</span>100</p><p class="l">Dostępność</p></div>
+    <div class="m" data-reveal style="--d:2"><p class="v"><span>82</span>100</p><p class="l">SEO</p></div>
+    <div class="m" data-reveal style="--d:3"><p class="v"><span>4,9 MB</span>303 KB</p><p class="l">Rozmiar strony</p></div>
+    <div class="m" data-reveal style="--d:4"><p class="v"><span>25,8 s</span>2,0 s</p><p class="l">Wczytanie głównego zdjęcia</p><small>symulowane łącze komórkowe</small></div>
+    <div class="m" data-reveal style="--d:5"><p class="v"><span>88</span>100</p><p class="l">Dobre praktyki</p></div>
+  </div>
+  <p class="note">Lighthouse 13, tryb mobilny, test lokalny z symulowanym spowolnieniem. Wyniki przed i po z jednego uruchomienia, każdy kolejny może różnić się o kilka punktów.</p>
+</section>
+
+<section class="shots" aria-label="Strona na telefonie">
+  <figure data-reveal><img src="img/telefon-before.jpg" alt="Strona przed poprawkami na telefonie: ogromne zdjęcie, polskie znaki zamienione w krzaki, mały szary tekst" width="780" height="1688" loading="lazy"><figcaption>Przed</figcaption></figure>
+  <figure data-reveal style="--d:2"><img src="img/telefon-after.jpg" alt="Strona po poprawkach na telefonie: czytelny nagłówek, zdjęcia i menu" width="780" height="1688" loading="lazy"><figcaption>Po</figcaption></figure>
+</section>
+
+<section class="list" aria-labelledby="h-fix">
+  <h2 class="display" id="h-fix" data-reveal>Co poprawiłem</h2>
+  <div class="fix" data-reveal><h3>Telefon</h3><p>Strona miała stałą szerokość 980 px i brak ustawienia dla małych ekranów, więc na telefonie była zmniejszona albo ucięta. Teraz układ dopasowuje się do ekranu.</p></div>
+  <div class="fix" data-reveal><h3>Polskie znaki</h3><p>Brak deklaracji kodowania zamieniał „Dąb” w „DÄ˜B”. Dodana, więc ą, ę i ó wyświetlają się poprawnie na każdym urządzeniu.</p></div>
+  <div class="fix" data-reveal><h3>Zdjęcia</h3><p>Trzy zdjęcia ważyły razem 4,9 MB. Teraz są w WebP w dwóch rozmiarach i przeglądarka bierze mniejszy na telefonie. Mają podane wymiary, więc układ nie skacze, a niewidoczne ładują się dopiero przy przewijaniu.</p></div>
+  <div class="fix" data-reveal><h3>Formularz</h3><p>Formularz wysyłał dane na nieistniejący adres, a skrypt przy ładowaniu wyrzucał błąd. Teraz pola mają etykiety i komunikaty o błędach, a po wypełnieniu otwiera się gotowy mail.</p></div>
+  <div class="fix" data-reveal><h3>Czytelność</h3><p>Tekst był jasnoszary na białym, z kontrastem około 2:1. Teraz jest ciemny, z kontrastem powyżej wymaganych 4,5:1.</p></div>
+  <div class="fix" data-reveal><h3>Dostępność i SEO</h3><p>Zdjęcia dostały opisy, strona język i opis dla wyszukiwarki, a link „kliknij tutaj” zamienił się w opisowy. Układ w tabelach został zastąpiony zwykłym, czytelnym HTML-em.</p></div>
+</section>
+
+<footer>
+  <p>Piekarnia Pod Dębem jest firmą fikcyjną. Strona „przed” jest celowo zepsuta, żeby pokazać typowe błędy.</p>
+  <p>Zdjęcia: Dana Hutchinson (CC BY 3.0), Faisal Ahammad (CC0), Mmangan333 (CC BY-SA 4.0), Wikimedia Commons i WordPress Photo Directory.</p>
+</footer>
+<script>
+var els=document.querySelectorAll('[data-reveal]');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}else els.forEach(function(e){e.classList.add('is-in')});
+</script>
+</body>
+</html>

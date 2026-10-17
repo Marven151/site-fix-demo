@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piekarnia Pod Dębem — chleb na zakwasie, Kraków</title>
+<meta name="description" content="Rodzinna piekarnia z Krakowa. Chleb na zakwasie, bułki i drożdżówki, pieczone codziennie rano. Wtorek–sobota, 6:00–14:00. Firma fikcyjna, projekt demonstracyjny.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231f4d3a'/%3E%3Cpath d='M6 22c0-6 4-11 10-11s10 5 10 11z' fill='%23f5f5f2'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f5f5f2;--ink:#1b1b1b;--muted:#4f4f4a;--accent:#1f4d3a;--tone:#e8e8e2;--m:clamp(20px,5vw,64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header{background:var(--accent);color:#fff;padding:20px var(--m);display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline;justify-content:space-between}
+header strong{font-size:1.5rem;letter-spacing:-.01em}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{padding:6px 0}
+main{padding:0 var(--m)}
+.hero{padding:56px 0 32px;max-width:48rem}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;margin:0 0 16px;letter-spacing:-.02em}
+.hero p{margin:0;color:var(--muted);font-size:1.1875rem}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin:32px 0 56px}
+figure{margin:0}
+figure img{width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--tone)}
+figcaption{padding-top:8px;font-weight:500}
+.about{max-width:48rem;margin-bottom:56px}
+.about h2,.contact h2{font-size:1.75rem;margin:0 0 12px;letter-spacing:-.01em}
+.contact{background:var(--tone);margin:0 calc(var(--m) * -1);padding:48px var(--m) 56px}
+form{display:grid;gap:16px;max-width:34rem}
+label{display:grid;gap:6px;font-weight:500}
+input,textarea{font:inherit;padding:12px 14px;border:2px solid #8c8c85;background:#fff;color:var(--ink);border-radius:0;width:100%}
+input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#a1260d}
+.err{color:#a1260d;font-weight:500;min-height:1.2em;font-size:.9375rem}
+button{font:inherit;font-weight:600;min-height:48px;padding:0 28px;background:var(--accent);color:#fff;border:0;cursor:pointer;justify-self:start}
+button:hover{background:#163a2b}
+.ok{padding:16px;background:var(--accent);color:#fff;max-width:34rem}
+footer{padding:24px var(--m);font-size:.9375rem;color:var(--muted)}
+footer p{margin:4px 0}
+</style>
+</head>
+<body>
+<header>
+  <strong>Piekarnia Pod Dębem</strong>
+  <nav aria-label="Główne"><a href="#">Strona główna</a><a href="#oferta">Oferta</a><a href="#o-nas">O nas</a><a href="#kontakt">Kontakt</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <h1>Chleb na zakwasie od 1998 roku</h1>
+    <p>Rodzinna piekarnia z Krakowa. Pieczemy codziennie rano, wtorek–sobota, 6:00–14:00.</p>
+  </section>
+  <section class="photos" id="oferta" aria-label="Oferta">
+    <figure><img src="img/chleb-960.webp" srcset="img/chleb-480.webp 480w, img/chleb-960.webp 960w" sizes="(min-width:900px) 30vw, 100vw" width="960" height="640" alt="Bochenek chleba na zakwasie z chrupiącą skórką" fetchpriority="high"><figcaption>Chleb na zakwasie</figcaption></figure>
+    <figure><img src="img/bulki-960.webp" srcset="img/bulki-480.webp 480w, img/bulki-960.webp 960w" sizes="(min-width:900px) 30vw, 100vw" width="960" height="540" alt="Półka z bułkami, część z ziarnami i polewą" loading="lazy"><figcaption>Bułki i drożdżówki</figcaption></figure>
+    <figure><img src="img/witryna-960.webp" srcset="img/witryna-480.webp 480w, img/witryna-960.webp 960w" sizes="(min-width:900px) 30vw, 100vw" width="960" height="650" alt="Witryna piekarni z pieczywem" loading="lazy"><figcaption>Pieczywo z witryny</figcaption></figure>
+  </section>
+  <section class="about" id="o-nas">
+    <h2>O nas</h2>
+    <p>Piekarnia Pod Dębem to rodzinna piekarnia z Krakowa. Chleb rośnie na własnym zakwasie przez całą noc. Zapraszamy po świeże pieczywo od wtorku do soboty. Zamówienia na większe ilości przyjmujemy dzień wcześniej. <a href="#oferta">Zobacz naszą ofertę</a>.</p>
+  </section>
+  <section class="contact" id="kontakt" aria-labelledby="h-kontakt">
+    <h2 id="h-kontakt">Napisz do nas</h2>
+    <form id="formularz" novalidate>
+      <label>Imię<input type="text" name="imie" autocomplete="given-name" required><span class="err" data-for="imie"></span></label>
+      <label>Adres e-mail<input type="email" name="mail" autocomplete="email" required><span class="err" data-for="mail"></span></label>
+      <label>Wiadomość<textarea name="tresc" rows="4" required></textarea><span class="err" data-for="tresc"></span></label>
+      <button type="submit">Wyślij</button>
+      <div class="ok" id="ok" role="status" hidden>Dziękujemy, wiadomość gotowa do wysłania w programie pocztowym. To strona demonstracyjna, nic nie jest wysyłane automatycznie.</div>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>ul. Przykładowa 5, Kraków. Wt.–sob. 6:00–14:00. Projekt demonstracyjny, firma fikcyjna.</p>
+  <p>Zdjęcia: Dana Hutchinson (CC BY 3.0), Faisal Ahammad (CC0), Mmangan333 (CC BY-SA 4.0).</p>
+</footer>
+<script>
+(function(){
+  var f=document.getElementById("formularz"),ok=document.getElementById("ok");
+  var msg={imie:"Podaj imię.",mail:"Podaj poprawny adres e-mail.",tresc:"Napisz wiadomość."};
+  function check(el){var e=f.querySelector('[data-for="'+el.name+'"]');var v=el.checkValidity();e.textContent=v?"":msg[el.name];if(v)el.removeAttribute("aria-invalid");else el.setAttribute("aria-invalid","true");return v}
+  f.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var all=true;f.querySelectorAll("input,textarea").forEach(function(el){if(!check(el))all=false});
+    if(!all){var bad=f.querySelector('[aria-invalid="true"]');if(bad)bad.focus();ok.hidden=true;return}
+    var d=new FormData(f);
+    location.href="mailto:zamowienia@pod-debem.example?subject="+encodeURIComponent("Wiadomość ze strony")+"&body="+encodeURIComponent("Imię: "+d.get("imie")+"\nE-mail: "+d.get("mail")+"\n\n"+d.get("tresc"));
+    ok.hidden=false;
+  });
+})();
+</script>
+</body>
+</html>
