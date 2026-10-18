@@ -10,12 +10,12 @@ Before and after of a typical small-business website, made to show the kind of f
 
 | Lighthouse (mobile) | Before | After |
 |---|---|---|
-| Performance | 75 | 99 |
+| Performance | 74-75 | 92-100 |
 | Accessibility | 45 | 100 |
-| Best practices | 88 | 100 |
-| SEO | 82 | 100 |
+| Best practices | 88-92 | 100 |
+| SEO | 82-83 | 100 |
 | Page weight | 4.9 MB | 303 KB |
 
-Single local run of Lighthouse 13 with simulated throttling; repeat runs vary by a few points.
+Lighthouse 13, mobile, simulated throttling, several runs over two days. Performance after the fix lands between 92 and 100 depending on the run; the other figures repeat.
 
 Photographs: Dana Hutchinson (CC BY 3.0), Faisal Ahammad (CC0), Mmangan333 (CC BY-SA 4.0).
