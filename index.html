@@ -13,7 +13,8 @@
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{--bg:#edccbe;--tone:#e3b9a8;--ink:#351a2b;--ink2:#4a2a3e;--muted:#56303f;--m:clamp(20px,6vw,96px);--display:'Bodoni Moda',Georgia,serif;--text:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box}
@@ -72,9 +73,10 @@ footer p+p{margin-top:8px}
   <p>Zepsuta strona typowej małej firmy i to, co z niej zrobiłem bez zmiany treści. Firma jest fikcyjna, błędy są prawdziwe i spotykane na co dzień.</p>
   <div class="acts"><a class="btn" href="after/">Zobacz po</a><a class="btn o" href="before/">Zobacz przed</a><a class="btn o" href="https://github.com/Marven151/site-fix-demo">Kod</a></div>
   </div>
-  <div class="ph" aria-hidden="true"><img class="a" src="after/img/chleb-960.webp" alt="" width="960" height="640"><img class="b" src="after/img/witryna-960.webp" alt="" width="960" height="650"></div>
+  <div class="ph" aria-hidden="true"><img class="a" src="after/img/chleb-960.webp" alt="" width="960" height="640" fetchpriority="high"><img class="b" src="after/img/witryna-960.webp" alt="" width="960" height="650"></div>
 </header>
 
+<main>
 <section class="nums" aria-labelledby="h-nums">
   <h2 class="display" id="h-nums" data-reveal>Wyniki</h2>
   <div class="grid">
@@ -102,6 +104,7 @@ footer p+p{margin-top:8px}
   <div class="fix" data-reveal><h3>Czytelność</h3><p>Tekst był jasnoszary na białym, z kontrastem około 2:1. Teraz jest ciemny, z kontrastem powyżej wymaganych 4,5:1.</p></div>
   <div class="fix" data-reveal><h3>Dostępność i SEO</h3><p>Zdjęcia dostały opisy, strona język i opis dla wyszukiwarki, a link „kliknij tutaj” zamienił się w opisowy. Układ w tabelach został zastąpiony zwykłym, czytelnym HTML-em.</p></div>
 </section>
+</main>
 
 <footer>
   <p>Piekarnia Pod Dębem jest firmą fikcyjną. Strona „przed” jest celowo zepsuta, żeby pokazać typowe błędy.</p>
